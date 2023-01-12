@@ -14,6 +14,7 @@ class Department {
         return this.secret;
     }
 }
+Department.staticExample = 'hello World';
 class ITDepartment extends Department {
     constructor(id, name) {
         super(id, name);
@@ -32,4 +33,5 @@ let ITdept = new ITDepartment(2, "ITDepartment");
 ITdept.addEmployee("abhijeet");
 console.log(ITdept.getEmployee());
 console.log(ITdept.getSecret());
+console.log(Department.staticExample);
 //# sourceMappingURL=main.js.map

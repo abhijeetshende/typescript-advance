@@ -2,6 +2,8 @@ class Department {
   private employee: string[] = [];
   private secret: string = "Department";
   constructor(id: number, name: string) {}
+
+  static readonly staticExample ='hello World'
   addEmployee(emp: string) {
     this.employee.push(emp);
   }
@@ -36,3 +38,4 @@ ITdept.addEmployee("abhijeet");
 
 console.log(ITdept.getEmployee());
 console.log(ITdept.getSecret());
+console.log(Department.staticExample);
