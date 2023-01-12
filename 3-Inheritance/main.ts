@@ -1,41 +1,19 @@
-class Department {
-  private employee: string[] = [];
-  private secret: string = "Department";
-  constructor(id: number, name: string) {}
-
-  static readonly staticExample ='hello World'
-  addEmployee(emp: string) {
-    this.employee.push(emp);
+class SingleTonDesignEx {
+  static instance: SingleTonDesignEx;
+   static getInstance() {
+    if (this.instance) {
+      return this.instance;
+    } else {
+      this.instance = new SingleTonDesignEx();
+      return this.instance;
+    }
   }
-  getEmployee() {
-    return this.employee;
-  }
- 
-  getSecret() {
-    return this.secret;
+  sayHello(){
+    console.log('hello singleTon instance');
+    
   }
 }
-
-class ITDepartment extends Department {
-  constructor(id: number, name: string) {
-    super(id, name);
-  }
-
-  getEmployee() {
-    return super.getEmployee();
-  }
-  getSecret(): string {
-    return super.getSecret();
-  }
-}
-
-let dept = new Department(1, "Department");
-dept.addEmployee("abhijeet");
-console.log(dept.getEmployee());
-
-let ITdept = new ITDepartment(2, "ITDepartment");
-ITdept.addEmployee("abhijeet");
-
-console.log(ITdept.getEmployee());
-console.log(ITdept.getSecret());
-console.log(Department.staticExample);
+let singletonex = SingleTonDesignEx.getInstance();
+let singletonex2 = SingleTonDesignEx.getInstance();
+singletonex.sayHello();
+singletonex2.sayHello();
