@@ -18,4 +18,12 @@ class PersonEx {
 }
 let p3 = new PersonEx('abhijeet', 35);
 p3.sayHello();
+let p5 = {
+    age: 0,
+    name: "",
+    sayHello: function () {
+        throw new Error("Function not implemented.");
+    },
+    startDate: new Date().toDateString()
+};
 //# sourceMappingURL=main.js.map
