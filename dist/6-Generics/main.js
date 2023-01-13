@@ -13,14 +13,14 @@ function merge(obj1, obj2) {
     return Object.assign(Object.assign({}, obj1), obj2);
 }
 let a1 = {
-    'name': 'abhijeet'
+    name: "abhijeet",
 };
 let b = {
-    'age': 34
+    age: 34,
 };
 // console.log(merge(a1,b));
 let output1 = merge(a1, b);
-let output2 = merge(a1, '30'); // this should thrown error as b is a string not an object
+let output2 = merge(a1, "30"); // this should thrown error as b is a string not an object
 output2.name;
 function merge1(obj1, obj2) {
     return Object.assign(obj1, obj2);
@@ -30,5 +30,24 @@ function merge1(obj1, obj2) {
 function merge3(obj1, obj2) {
     return obj1[obj2];
 }
-console.log(merge3({ name: 'asdsad' }, 'name'));
+console.log(merge3({ name: "asdsad" }, "name"));
+class DataStorage {
+    constructor() {
+        this.data = [];
+    }
+    addItem(item) {
+        this.data.push(item);
+    }
+    removeItem(item) {
+        this.data.slice(this.data.indexOf(item), 1);
+    }
+    getItem() {
+        return this.data;
+    }
+}
+let datastorage1 = new DataStorage();
+datastorage1.addItem('one');
+datastorage1.addItem('two');
+datastorage1.removeItem('one');
+console.log(datastorage1.getItem());
 //# sourceMappingURL=main.js.map
