@@ -50,4 +50,37 @@ datastorage1.addItem('one');
 datastorage1.addItem('two');
 datastorage1.removeItem('one');
 console.log(datastorage1.getItem());
+/***
+ *  datatype number showing error as
+ */
+// let datastorage2 = new DataStorage();
+// datastorage2.addItem(1)
+// datastorage2.addItem(2)
+// datastorage2.removeItem(3)
+// console.log(datastorage2.getItem());
+class DataStorageGeneric {
+    constructor() {
+        this.data = [];
+    }
+    addItem(item) {
+        this.data.push(item);
+    }
+    removeItem(item) {
+        this.data.slice(this.data.indexOf(item), 1);
+    }
+    getItem() {
+        return this.data;
+    }
+}
+let datastorageGeneric = new DataStorage();
+datastorage1.addItem('one');
+datastorage1.addItem('two');
+datastorage1.removeItem('one');
+console.log(datastorage1.getItem());
+function paritalExampleFn() {
+    let a = {}; //Partial  can be used when object key at this time not fully added
+    a.name = 'abhijeet';
+    a.age = 25;
+    return a;
+}
 //# sourceMappingURL=main.js.map
