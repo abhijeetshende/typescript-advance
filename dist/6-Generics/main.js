@@ -27,4 +27,8 @@ function merge1(obj1, obj2) {
 }
 // let output3 = merge1(a1,'string'); // as U is extending object this is now throwing mess
 // console.log(output3);
+function merge3(obj1, obj2) {
+    return obj1[obj2];
+}
+console.log(merge3({ name: 'asdsad' }, 'name'));
 //# sourceMappingURL=main.js.map

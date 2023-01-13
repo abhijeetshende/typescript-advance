@@ -34,3 +34,11 @@ function merge1<T extends object, U extends object>(obj1: T, obj2: U) {
 // let output3 = merge1(a1,'string'); // as U is extending object this is now throwing mess
 // console.log(output3);
 
+
+function merge3<T extends object, U extends keyof T >(obj1: T, obj2: U) {
+  return obj1[obj2]
+}
+console.log(merge3({name:'asdsad'},'name'));
+
+
+
