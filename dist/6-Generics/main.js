@@ -83,4 +83,6 @@ function paritalExampleFn() {
     a.age = 25;
     return a;
 }
+let n = ['leela', 'abhijeet'];
+// n.push('la'); // push is not allowed for readonly array
 //# sourceMappingURL=main.js.map

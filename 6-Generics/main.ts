@@ -105,5 +105,5 @@ function paritalExampleFn() :PartialEx{
 }
 
 let n:Readonly<string[]> = ['leela','abhijeet'];
-n.push('la'); // push is not allowed for readonly array
+// n.push('la'); // push is not allowed for readonly array
 
